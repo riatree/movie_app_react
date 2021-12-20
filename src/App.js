@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import Movie from './Movie';
+import './App.css'
 
 // Component (상속)
 class App extends React.Component{
@@ -32,7 +33,7 @@ class App extends React.Component{
   render() {
     // 문장 혹은 아이콘표시를 하기위해
     const { isLoading, movies } = this.state;
-    return <div>{isLoading ? 'Loading...' : movies.map((movie) => {
+    return <section class="conteiner">{isLoading ? ( <div class="loader"><span class="laoder_text">'Loading...'</span></div> ): ( <div class="movies"> {movies.map((movie) => {
       //console.log(movie); 
       return <Movie 
         key = {movie.id}
@@ -42,7 +43,8 @@ class App extends React.Component{
         summary = {movie.summary}
         poster = {movie.medium_cover_image}
       />;
-    })}</div>;
+    })}</div>
+    )}</section>;
   }
 }
 
