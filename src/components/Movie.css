@@ -1,3 +1,6 @@
+.movies {
+    margin: 0 auto;
+}
 .movies .movie {
     background-color: white;
     margin-bottom: 70px;

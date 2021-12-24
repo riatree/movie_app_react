@@ -1,12 +1,13 @@
 import React from 'react';
 import './About.css';
 
-function About() {
+function About(props) {
+    console.log(props);
     return (
         <div className='about__container'>
-            <sapn>
+            <span>
                 "Freedom is the freedom to say that two plus two make four. If that is grante, all else follows."
-            </sapn>
+            </span>
             <span>-George Orwell, 1984</span>
         </div>
     );
